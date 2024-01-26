@@ -14,5 +14,6 @@ autocmd({ "BufNewFile", "BufRead" }, {
   pattern = "*.wgsl",
   callback = function()
     vim.bo.filetype = "wgsl"
+    vim.bo.commentstring = "//%s"
   end,
 })

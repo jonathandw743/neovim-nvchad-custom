@@ -47,6 +47,7 @@ M.mason = {
     "clang-format",
 
     "rust-analyzer",
+    "codelldb",
 
     "black",
     "mypy",
