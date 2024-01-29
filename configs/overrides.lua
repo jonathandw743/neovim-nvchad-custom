@@ -19,6 +19,11 @@ M.treesitter = {
     "typescript",
     "javascript",
     "svelte",
+
+    "gdscript",
+    -- "gdresource",
+    
+    "java",
   },
   indent = {
     enable = true,
@@ -54,6 +59,11 @@ M.mason = {
     "ruff",
     "pyright",
     "debugpy",
+
+    "gdtoolkit",
+    -- just call it java ffs
+    "jdtls",
+    "checkstyle",
   },
 }
 
