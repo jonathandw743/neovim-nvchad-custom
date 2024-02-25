@@ -19,10 +19,11 @@ M.treesitter = {
     "typescript",
     "javascript",
     "svelte",
+    "toml",
 
     "gdscript",
     -- "gdresource",
-    
+
     "java",
   },
   indent = {
@@ -53,6 +54,7 @@ M.mason = {
 
     "rust-analyzer",
     "codelldb",
+    "taplo",
 
     "black",
     "mypy",
@@ -63,6 +65,7 @@ M.mason = {
     "gdtoolkit",
     -- just call it java ffs
     "jdtls",
+    -- "java-language-server",
     "checkstyle",
   },
 }
@@ -82,5 +85,18 @@ M.nvimtree = {
     },
   },
 }
+
+-- M.mason_lspconfig = {
+--   ensure_installed = {
+--     "lua_ls",
+--     "rust_analyzer",
+--     "html",
+--     "cssls",
+--     "tsserver",
+--     "clangd",
+--     "svelte",
+--     "jdtls",
+--   },
+-- }
 
 return M

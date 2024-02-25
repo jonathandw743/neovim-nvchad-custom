@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd", "svelte", "gdscript", "jdtls" }
+local servers = { "html", "cssls", "tsserver", "clangd", "svelte", "gdscript", "jdtls", "taplo" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -20,7 +20,6 @@ lspconfig.pyright.setup({
 })
 
 
-local lspconfig = require "lspconfig"
 local configs = require "lspconfig.configs"
 
 if not configs.wgsl_analyzer then
