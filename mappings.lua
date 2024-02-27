@@ -11,11 +11,18 @@ M.general = {
         require("conform").format()
       end,
       "formatting",
-    }
-
+    },
+    ["<C-j>"] = {
+      "j<C-e>",
+      "move screen and cursor down one line",
+    },
+    ["<C-k>"] = {
+      "k<C-y>",
+      "move screen and cursor up one line",
+    },
   },
   v = {
-    [">"] = { ">gv", "indent"},
+    [">"] = { ">gv", "indent" },
   },
 
   i = {
@@ -30,35 +37,35 @@ M.dap = {
   n = {
     ["<leader>db"] = { "<cmd> DapToggleBreakpoint <CR>" },
     ["<leader>dus"] = {
-      function ()
-        local widgets = require('dap.ui.widgets');
-        local sidebar = widgets.sidebar(widgets.scopes);
-        sidebar.open();
+      function()
+        local widgets = require "dap.ui.widgets"
+        local sidebar = widgets.sidebar(widgets.scopes)
+        sidebar.open()
       end,
-      "Open debugging sidebar"
-    }
-  }
+      "Open debugging sidebar",
+    },
+  },
 }
 
 M.crates = {
   plugin = true,
   n = {
     ["<leader>rcu"] = {
-      function ()
-        require('crates').upgrade_all_crates()
+      function()
+        require("crates").upgrade_all_crates()
       end,
-      "update crates"
-    }
-  }
+      "update crates",
+    },
+  },
 }
 M.dap_python = {
   plugin = true,
   n = {
     ["<leader>dpr"] = {
       function()
-        require('dap-python').test_method()
-      end
-    }
-  }
+        require("dap-python").test_method()
+      end,
+    },
+  },
 }
 return M
