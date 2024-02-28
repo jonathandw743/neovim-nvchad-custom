@@ -25,6 +25,8 @@ M.treesitter = {
     -- "gdresource",
 
     "java",
+
+    "go",
   },
   indent = {
     enable = true,
@@ -68,6 +70,8 @@ M.mason = {
     "jdtls",
     -- "java-language-server",
     "checkstyle",
+
+    "gopls",
   },
 }
 
