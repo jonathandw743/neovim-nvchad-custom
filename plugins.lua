@@ -133,6 +133,17 @@ local plugins = {
     end
   },
   {
+    "jay-babu/mason-nvim-dap.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "williamboman/mason.nvim",
+      "mfussenegger/nvim-dap",
+    },
+    opts = {
+      handlers = {}
+    },
+  },
+  {
     "mfussenegger/nvim-dap",
     config = function(_, opts)
       require("core.utils").load_mappings("dap")
@@ -153,7 +164,8 @@ local plugins = {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = {"python"},
+    -- ft = {"python"},
+    event = "VeryLazy",
     opts = function()
       return require "custom.configs.null-ls"
     end,

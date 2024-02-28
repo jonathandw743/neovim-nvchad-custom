@@ -10,6 +10,8 @@ local options = {
     svelte = { "prettier" },
 
 		sh = { "shfmt" },
+
+    -- c = { "clang-format" }
 	},
 
   -- adding same formatter for multiple filetypes can look too much work for some

@@ -35,7 +35,10 @@ M.general = {
 M.dap = {
   plugin = true,
   n = {
-    ["<leader>db"] = { "<cmd> DapToggleBreakpoint <CR>" },
+    ["<leader>db"] = {
+      "<cmd> DapToggleBreakpoint <CR>",
+      "Add breakpoint at line",
+    },
     ["<leader>dus"] = {
       function()
         local widgets = require "dap.ui.widgets"
@@ -44,6 +47,10 @@ M.dap = {
       end,
       "Open debugging sidebar",
     },
+    ["<leader>dr"] = {
+      "<cmd> DapContinue <CR>",
+      "Start or continue the debugger",
+    }
   },
 }
 
