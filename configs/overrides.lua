@@ -67,7 +67,7 @@ M.mason = {
 
     "gdtoolkit",
     -- just call it java ffs
-    "jdtls",
+    -- "jdtls",
     -- "java-language-server",
     "checkstyle",
 

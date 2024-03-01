@@ -5,7 +5,17 @@ local null_ls = require('null-ls')
 local opts = {
   sources = {
     null_ls.builtins.formatting.black,
-    null_ls.builtins.diagnostics.mypy,
+    null_ls.builtins.diagnostics.mypy.with({
+      extra_args = function()
+      -- in order of priority:
+        -- venv
+        -- conda
+        -- asdf shims (epic version manager)
+        -- system files
+      local virtual = os.getenv("VIRTUAL_ENV") or os.getenv("CONDA_PREFIX") or "~/.asdf/shims/" or "/usr/bin/" or "/bin/"
+      return { "--python-executable", virtual .. "python3" }
+      end,
+    }),
     null_ls.builtins.diagnostics.ruff,
     null_ls.builtins.formatting.clang_format,
     null_ls.builtins.formatting.gofumpt,

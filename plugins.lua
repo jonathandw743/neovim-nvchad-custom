@@ -173,8 +173,16 @@ local plugins = {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    -- ft = {"python"},
+    -- for a bunch of lsps like for c and cpp
     event = "VeryLazy",
+    opts = function()
+      return require "custom.configs.null-ls"
+    end,
+  },
+  {
+    "nvimtools/none-ls.nvim",
+    -- for python (could transfer the null-ls ones here)
+    ft = {"python"},
     opts = function()
       return require "custom.configs.null-ls"
     end,
