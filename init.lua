@@ -9,6 +9,8 @@
 local autocmd = vim.api.nvim_create_autocmd
 
 vim.g.dap_virtual_text = true
+vim.opt.number = true
+vim.opt.relativenumber = true
 
 autocmd({ "BufNewFile", "BufRead" }, {
   pattern = "*.wgsl",

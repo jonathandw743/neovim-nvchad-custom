@@ -13,11 +13,11 @@ M.general = {
       "formatting",
     },
     ["<C-j>"] = {
-      "j<C-e>",
+      "<C-e>j",
       "move screen and cursor down one line",
     },
     ["<C-k>"] = {
-      "k<C-y>",
+      "<C-y>k",
       "move screen and cursor up one line",
     },
   },
