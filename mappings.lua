@@ -23,6 +23,14 @@ M.general = {
   },
   v = {
     [">"] = { ">gv", "indent" },
+    ["<C-j>"] = {
+      "<C-e>j",
+      "move screen and cursor down one line",
+    },
+    ["<C-k>"] = {
+      "<C-y>k",
+      "move screen and cursor up one line",
+    },
   },
 
   i = {
